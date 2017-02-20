@@ -41,6 +41,8 @@ If you can't make these times, don't hesitate to post questions on Piazza or con
 ## Grading
 ### Breakdown
 
+Your grade report can be found at [https://w266grades.appspot.com](https://w266grades.appspot.com).
+
 Your grade will be determined as follows:
 * **Participation**: 10%
 * **Assignments**: 50%
@@ -156,10 +158,14 @@ We'll update the table below with assignments as they become available, as well 
   <br>due&nbsp;Jan.&nbsp;22</td>
   <td><strong>Background and TensorFlow</strong></td>
   <td><ul>
-    <li>Information Theory
-    <li>TensorFlow tutorial
+  <li>Information Theory
+  <li>TensorFlow tutorial
   </ul></td>
-  <td><a href="../assignment/a1" target="_blank">Assignment 1</a></td>
+  <td>
+  <a href="../assignment/a1" target="_blank">Assignment 1</a>
+  <p><p>
+  <a href="https://docs.google.com/presentation/d/1z-EsTa3yUn0GBBelNgbUpZbAU_yob2oMM-NlYTP9oHg/preview">[Tutorial&nbsp;Slides]</a>
+  </td>
 </tr>
 <tr><!--- Week 3 -->
   <td><strong>Week&nbsp;3</strong><br>(Jan.&nbsp;23&nbsp;-&nbsp;29)</td>
@@ -176,7 +182,10 @@ We'll update the table below with assignments as they become available, as well 
   <li><em>Optional:</em> <a href="http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/" target="_blank">Deep Learning, NLP, and Representations</a> (Chris Olah's blog)
   <li><em>Optional:</em> <a href="https://www.tensorflow.org/versions/master/tutorials/word2vec/index.html" target="_blank">Tensorflow Word2Vec Tutorial</a> (just the parts on <a href="https://github.com/tensorflow/tensorflow/blob/r0.10/tensorflow/examples/tutorials/word2vec/word2vec_basic.py" target="_blank">word2vec_basic.py</a> - don’t bother with the “Optimizing the Implementation” part or anything in C++)
   <li><em>Optional:</em> <a href="https://www.technologyreview.com/s/602025/how-vector-space-mathematics-reveals-the-hidden-sexism-in-language/" target="_blank">How Vector Space Mathematics Reveals the Hidden Sexism in Language</a> (and the <a href="http://arxiv.org/abs/1607.06520)" target="_blank">original paper</a>)
-  </ul></td>
+  </ul>
+  <p>
+  <a href="https://docs.google.com/a/kunz.ca/presentation/d/17Szk1eaE0v6Q4md-U7nsCLREhGLdUE4ekR6QMFe-nHo/preview" target="_blank">[Slides]</a> <a href="../materials/week3/embeddings.ipynb" target="_blank">[Word&nbsp;Embeddings&nbsp;Notebook]</a> <a href="http://projector.tensorflow.org/" target="_blank">[TensorFlow&nbsp;Embedding&nbsp;Projector]</a>
+  </td>
 </tr>
 <tr><!--- Week 4 -->
   <td><strong>Week&nbsp;4</strong><br>(Jan.&nbsp;30&nbsp;-&nbsp;Feb.&nbsp;5)</td>
@@ -191,16 +200,24 @@ We'll update the table below with assignments as they become available, as well 
   <li>Read: <a href="http://machinelearning.wustl.edu/mlpapers/paper_files/BengioDVJ03.pdf" target="_blank">A Neural Probabilistic Language Model</a> (Bengio et al. 2003)
   <li>Read or skim: <a href="http://neuralnetworksanddeeplearning.com/chap2.html" target="_blank">How the backpropagation algorithm works</a>
   <li><em>Optional:</em> <a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/" target="_blank">Understanding LSTM Networks</a> (Chris Olah's blog)
-  <li>Optional (skim): <a href="https://www.tensorflow.org/versions/master/tutorials/recurrent/index.html#recurrent-neural-networks" target="_blank">Tensorflow LSTM Language Model Tutorial</a>
-  <li>Optional / fun: <a href="http://playground.tensorflow.org/" target="_blank">Tensorflow Playground</a>
-  </ul></td>
+  <li><em>Optional (skim):</em> <a href="https://www.tensorflow.org/versions/master/tutorials/recurrent/index.html#recurrent-neural-networks" target="_blank">Tensorflow LSTM Language Model Tutorial</a>
+  <li><em>Optional / fun:</em> <a href="http://playground.tensorflow.org/" target="_blank">Tensorflow Playground</a>
+  </ul>
+  <p>
+  <a href="https://docs.google.com/presentation/d/1wxvIPmeuB7-5OMjFNoSeZ5Isb832cgZH6E4_DZOtk8g/preview" target="_blank">[Slides]</a> <a href="../materials/week4/nplm.ipynb" target="_blank">[NPLM Notebook]</a>
+  </td>
 </tr>
 <tr><!--- Week 3-4 Assignment -->
-  <td><strong>Assignment&nbsp;2</strong>
+  <td><strong><a href="../assignment/a2" target="_blank">Assignment&nbsp;2</a></strong>
   <br>due&nbsp;Feb.&nbsp;5</td>
   <td><strong>n-grams and Word Embeddings</strong></td>
-  <td></td>
-  <td><em>To be released</em></td>
+  <td><ul>
+    <li>Smoothed n-grams
+    <li>Exploring embeddings
+  </ul></td>
+  <td>
+  <a href="../assignment/a2" target="_blank">Assignment 2</a>
+  </td>
 </tr>
 <tr><!--- Week 5 -->
   <td><strong>Week&nbsp;5</strong><br>(Feb.&nbsp;6&nbsp;-&nbsp;12)</td>
@@ -221,7 +238,11 @@ We'll update the table below with assignments as they become available, as well 
   <br>due&nbsp;Feb.&nbsp;12</td>
   <td></td>
   <td></td>
-  <td><a href="../project" target="_blank">Final Project Guidelines</a></td>
+  <td><strong><a href="../project" target="_blank">Final Project Guidelines</a></strong>
+  <p>
+  <p><a href="https://docs.google.com/presentation/d/1wxvIPmeuB7-5OMjFNoSeZ5Isb832cgZH6E4_DZOtk8g/edit?slide=id.g1c442da208_0_86" target="_blank">[Project Overview / Topic Slides]</a>
+  <br><a href="https://piazza.com/class/iwhnzw9npj5652?cid=266" target="_blank">[Note on LDC Corpora Access]</a>
+  </td>
 </tr>
 <tr><!--- Week 6 -->
   <td><strong>Week&nbsp;6</strong><br>(Feb.&nbsp;13&nbsp;-&nbsp;19)</td>
@@ -238,6 +259,18 @@ We'll update the table below with assignments as they become available, as well 
   <li>Skim: <a href="http://nlp.stanford.edu/IR-book/pdf/irbookprint.pdf" target="_blank">"An Introduction to Information Retrieval", sections 6.2 and 6.3</a>
   <li><em>Optional:</em> <a href="http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf" target="_blank">PageRank</a> (Page, et al. 1999)
   </ul></td>
+</tr>
+<tr><!--- Week 5-6 Assignment -->
+  <td><strong><a href="../assignment/a3" target="_blank">Assignment&nbsp;3</a></strong>
+  <br>due&nbsp;Feb.&nbsp;19</td>
+  <td><strong>RNN Language Model</strong></td>
+  <td><ul>
+  <li>RNNLM structure
+  <li>TensorFlow implementation
+  </ul></td>
+  <td>
+  <a href="../assignment/a3" target="_blank">Assignment 3</a>
+  </td>
 </tr>
 <tr><!--- Week 7 -->
   <td><strong>Week&nbsp;7</strong><br>(Feb.&nbsp;20&nbsp;-&nbsp;26)</td>
@@ -273,7 +306,9 @@ We'll update the table below with assignments as they become available, as well 
   <li>Graph based parsing: Eisner Algorithm, Chu&#8209;Liu&#8209;Edmonds
   </ul></td>
   <td><ul>
-  <li>Read: <a href="http://www.nltk.org/book_1ed/ch08.html" target="_blank">NLTK book chapter 8 (analyzing sentence structure)</a>
+  <li>Read: <a href="https://research.googleblog.com/2016/05/announcing-syntaxnet-worlds-most.html" target="_blank">SyntaxNet (Parsey McParseface)</a>
+  <li>Read: <a href="https://web.stanford.edu/~jurafsky/slp3/14.pdf" target="_blank">Dependency Parsing (J&M Chapter 14)</a>
+  <li>Optional: <a href="http://cs.stanford.edu/people/danqi/papers/emnlp2014.pdf" target="_blank">A Fast and Accurate Dependency Parser using Neural Networks</a> (Chen & Manning 2014)
   </ul></td>
 </tr>
 <tr><!--- Week 10 -->
@@ -285,10 +320,10 @@ We'll update the table below with assignments as they become available, as well 
   <li>Probabilistic CFGs
   <li>Lexicalized grammars, split-merge, and EM
   </ul></td>
-  <td><em>Readings TBA</em></td>
-  <!-- <td><ul>        -->
-  <!-- <li>Placeholder -->
-  <!-- </ul></td>      -->
+  <td><ul>
+  <li>Read: <a href="http://www.nltk.org/book_1ed/ch08.html" target="_blank">NLTK book chapter 8 (analyzing sentence structure)</a>
+  <li>Play: <a href="http://nlp.stanford.edu:8080/parser/" target="_blank">Stanford parser</a> (online demo)
+  </ul></td>
 </tr>
 <tr><!--- Week 11 -->
   <td><strong>Week&nbsp;11</strong><br>(Mar.&nbsp;20&nbsp;-&nbsp;26)</td>
@@ -299,7 +334,10 @@ We'll update the table below with assignments as they become available, as well 
   <li>Coreference Resolution
   </ul></td>
   <td><ul>
-  <li><a href="http://www.nltk.org/book_1ed/ch07.html" target="_blank">NLTK Book Chapter 7 (Extracting Information from Text)</a>
+  <li>Read: <a href="http://www.nltk.org/book_1ed/ch07.html" target="_blank">NLTK Book Chapter 7 (Extracting Information from Text)</a>
+  <li><em>Optional:</em> <a href="http://www.aclweb.org/anthology/D09-1120" target="_blank">Simple Coreference Resolution with Rich Syntactic and Semantic Features</a> (Haghighi and Klein 2009, rule-based coreference)
+  <li><em>Optional:</em> <a href="http://www.aclweb.org/anthology/P16-1061" target="_blank">Improving Coreference Resolution by Learning Entity-Level Distributed
+  Representations</a> (Clark and Manning 2016, neural coreference)
   </ul></td>
 </tr>
 <tr><!--- Spring Break -->
@@ -316,7 +354,7 @@ We'll update the table below with assignments as they become available, as well 
   <li>Evaluation
   </ul></td>
   <td><ul>
-  <li><a href="http://www.isi.edu/natural-language/mt/wkbk.rtf" target="_blank">Statistical MT Handbook by Kevin Knight</a>
+  <li>Skim: <a href="http://www.isi.edu/natural-language/mt/wkbk.rtf" target="_blank">Statistical MT Handbook by Kevin Knight</a>
   </ul></td>
 </tr>
 <tr><!--- Week 13 -->
@@ -328,8 +366,8 @@ We'll update the table below with assignments as they become available, as well 
   <li>Attention-based models
   </ul></td>
   <td><ul>
-  <li><a href="http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf" target="_blank">Sequence to Sequence Learning with Neural Networks</a>
-  <li><a href="https://arxiv.org/pdf/1409.0473.pdf" target="_blank">Neural Machine Translation by Jointly Learning to Align and Translate</a>
+  <li>Read: <a href="http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf" target="_blank">Sequence to Sequence Learning with Neural Networks</a>
+  <li>Read: <a href="https://arxiv.org/pdf/1409.0473.pdf" target="_blank">Neural Machine Translation by Jointly Learning to Align and Translate</a>
   <li><em>Optional:</em> <a href="https://arxiv.org/abs/1609.08144" target="_blank">Google’s Neural Machine Translation System</a>
   <li><em>Optional:</em> <a href="http://distill.pub/2016/augmented-rnns/#attentional-interfaces" target="_blank">Attention and Augmented Recurrent Neural Networks</a> (section on “Attentional Interfaces” has an awesome visualization of an MT example, showing alignments)
   </ul></td>
@@ -344,10 +382,10 @@ We'll update the table below with assignments as they become available, as well 
   <li>Integer linear programming (ILP) for optimal solutions
   <li>Evaluation of summaries
   </ul></td>
-  <td><em>Readings TBA</em></td>
-  <!-- <td><ul>        -->
-  <!-- <li>Placeholder -->
-  <!-- </ul></td>      -->
+  <td><ul>       
+  <li>Skim: <a href="https://www.cs.cmu.edu/~afm/Home_files/Das_Martins_survey_summarization.pdf" target="_blank">A Survey on Automatic Text Summarization</a> (Das and Martins, 2007)
+  <li>Read: <a href="https://arxiv.org/pdf/1509.00685v2.pdf" target="_blank">A Neural Attention Model for Abstractive Sentence Summarization</a> (Rush et al. 2015)
+  </ul></td>     
 </tr>
 <tr><!--- Week 15 -->
   <td><strong>Week&nbsp;15</strong><br>(Apr.&nbsp;24&nbsp;-&nbsp;28)</td>
@@ -357,10 +395,11 @@ We'll update the table below with assignments as they become available, as well 
   <li>Aggregated sentiment applications
   <li>Convolutional neural networks (CNNs)
   </ul></td>
-  <td><em>Readings TBA</em></td>
-  <!-- <td><ul>        -->
-  <!-- <li>Placeholder -->
-  <!-- </ul></td>      -->
+  <td><ul>       
+  <li>Skim: <a href="http://www.cs.cornell.edu/home/llee/omsa/omsa.pdf" target="_blank">Opinion Mining and Sentiment Analysis</a> (Pang and Lee 2008) - focus on Chapters 1-4
+  <li>Read: <a href="http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/" target="_blank">Understanding Convolutional Neural Networks for NLP</a>
+  <li>Read: <a href="https://arxiv.org/abs/1408.5882" target="_blank">Convolutional Neural Networks for Sentence Classification</a>
+  </ul></td>     
 </tr>
 </table>
 

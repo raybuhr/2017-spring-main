@@ -6,15 +6,33 @@
 # which will create a private submission repo linked to your GitHub username.
 #
 # Usage: ./submit.sh -u my_github_username
+#
+# Options:
+#   -f : force submit, overwrites target branch
+#   -a <number> : specify assignment number
 
 GITHUB_USERNAME="${USER}"
+DEFAULT_ASSIGNMENT="3"
 FORCE="false"
 TARGET_BRANCH="master"
 
-while getopts "u:f" opt; do
+function validate_assignment() {
+  grep -F -q -x "$1" <<EOF
+0
+1
+2
+EOF
+}
+
+while getopts "u:a:f" opt; do
   case $opt in
     u)
       GITHUB_USERNAME="${OPTARG}"
+      ;;
+    a)
+      ASSIGNMENT="${OPTARG}"
+      validate_assignment "${ASSIGNMENT}" \
+        || (echo "Invalid assignment number '$ASSIGNMENT'."; exit 1)
       ;;
     f)
       FORCE="true"
@@ -27,9 +45,29 @@ done
 
 set -e
 
+###############################
+# Verify assignment to submit #
+###############################
+if [[ -z "$ASSIGNMENT" ]]; then
+  echo "No assignment number specified."
+  echo "Submit the current assignment 'a${DEFAULT_ASSIGNMENT}'?"
+  select mode in "Yes" "(cancel)"; do
+    case $mode in
+      "Yes" ) ASSIGNMENT="${DEFAULT_ASSIGNMENT}"; break;;
+      "(cancel)" ) echo "Submit cancelled."; exit;;
+    esac
+  done
+fi
+TARGET_BRANCH="a${ASSIGNMENT}-submit"
+echo "=== Submitting assignment ${ASSIGNMENT} ==="
+echo "Note: this will submit your whole repository to branch '${TARGET_BRANCH}'"
+
+#################################
+# Check for uncommitted changes #
+#################################
 CHANGED=$(git diff-index --name-only HEAD --)
 if [[ ! -z "$CHANGED" ]]; then
-  echo "Warning! You have uncommitted changes in this repository:"
+  echo "== Warning! You have uncommitted changes in this repository: =="
   git diff --stat
   echo "Commit before submitting? (submit.sh will only push commited changes)"
   select mode in "Yes" "No" "(cancel)"; do
@@ -41,9 +79,12 @@ if [[ ! -z "$CHANGED" ]]; then
   done
 fi
 
+###############################
+# Select github access method #
+###############################
 REPO_NAME="datasci-w266/2017-spring-assignment-$GITHUB_USERNAME"
-
-echo "Select preferred GitHub access protocol:"
+WEB_URL="https://github.com/$REPO_NAME/tree/${TARGET_BRANCH}"
+echo "== Select GitHub access protocol =="
 echo "HTTPS is default, but SSH may be needed if you use two-factor auth."
 select mode in "HTTPS" "SSH" "(cancel)"; do
   case $mode in
@@ -53,16 +94,17 @@ select mode in "HTTPS" "SSH" "(cancel)"; do
   esac
 done
 
-# Set up git remote
+###########################
+# Set up git remote alias #
+###########################
 REMOTE_ALIAS="2017-spring-assignment-submit"
-echo "== Pushing to submission repo $REPO_NAME"
+echo "== Pushing to submission repo $REPO_NAME, branch '${TARGET_BRANCH}'"
 echo "== Latest commit: $(git rev-parse HEAD)"
-echo "== Check submission status at https://github.com/$REPO_NAME"
+echo "== Check submission status at ${WEB_URL}"
 if [[ $(git remote | grep "$REMOTE_ALIAS") ]]; then
   git remote -v remove "$REMOTE_ALIAS"
 fi
 git remote -v add "$REMOTE_ALIAS" "${REMOTE_URL}"
-# git push "$REMOTE_ALIAS" --all
 if [[ ${FORCE} == true ]]; then
   echo "Warning! Force-submit will overwrite remote history. Proceed?"
   select mode in "Force submit" "(cancel)"; do
@@ -76,11 +118,14 @@ else
   git push "$REMOTE_ALIAS" "HEAD:${TARGET_BRANCH}"
 fi
 
-# Verify submission succeeded
+###############################
+# Verify submission succeeded #
+###############################
 echo "=== Verifying submission ==="
 git fetch "$REMOTE_ALIAS"
 if [[ $(git rev-parse HEAD) == $(git ls-remote "$REMOTE_ALIAS" "${TARGET_BRANCH}" | cut -f1) ]]; then
   echo "=== Submission successful! ==="
+  echo "You can view your submission at ${WEB_URL}"
 else
   echo "=== ERROR: Submission failed. Manually push to $REPO_NAME:${TARGET_BRANCH}, or contact the course staff for help."
   echo "=== Alternatively, re-run this script in force-mode:"

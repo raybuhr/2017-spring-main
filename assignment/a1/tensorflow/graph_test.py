@@ -24,10 +24,18 @@ class TestLayer(tf.test.TestCase):
         with self.test_session() as sess:
             x = tf.placeholder(tf.float32, shape=[None, 3])
             z = graph.affine_layer(10, x)
+            # Verify graph properties.
             self.assertAllEqual(10, z.get_shape()[-1])
 
-            x_val = np.array([[3., 2., 1.]])
+            # Setup for running the graph.
             sess.run(tf.global_variables_initializer())
+
+            # Verify that dimensions work with more than one row.
+            sess.run(z, feed_dict={
+                x: np.array([[1., 2., 3.], [4., 5., 6.]])})
+
+            # Verify computation correct.
+            x_val = np.array([[3., 2., 1.]])
             z_val = sess.run(z, feed_dict={x: x_val})
             self.assertEquals((1, 10), z_val.shape)
             self.assertAllClose([[
@@ -36,17 +44,22 @@ class TestLayer(tf.test.TestCase):
                 3.04762506,   0.80803722,  0.48845479,
                 2.23918748]], z_val)
 
+
     def test_fully_connected_layers(self):
         with self.test_session() as sess:
             x = tf.placeholder(tf.float32, shape=[None, 3])
             out = graph.fully_connected_layers([10, 20, 100, 1], x)
             self.assertAllEqual(1, out.get_shape()[-1])
 
-            x_val = np.array([[3., 2., 1.], [5., 6., 87.]])
             sess.run(tf.global_variables_initializer())
+
+            sess.run(out, feed_dict={
+                x: np.array([[1., 2., 3.], [4., 5., 6.]])})
+
+            x_val = np.array([[-3., 2., 1.], [5., 6., 87.]])
             out_val = sess.run(out, feed_dict={x: x_val})
             self.assertEquals((2, 1), out_val.shape)
-            self.assertAllClose([[1.597199],[50.472717]], out_val)
+            self.assertAllClose([[1.735874],[50.472717]], out_val)
 
     def test_no_fully_connected_layers(self):
         with self.test_session() as sess:
@@ -54,8 +67,12 @@ class TestLayer(tf.test.TestCase):
             out = graph.fully_connected_layers([], x)
             self.assertAllEqual(3, out.get_shape()[-1])
 
-            x_val = np.array([[3., 2., 1.], [5., 6., 87.]])
             sess.run(tf.global_variables_initializer())
+
+            sess.run(out, feed_dict={
+                x: np.array([[1., 2., 3.], [4., 5., 6.]])})
+
+            x_val = np.array([[3., 2., 1.], [5., 6., 87.]])
             out_val = sess.run(out, feed_dict={x: x_val})
             self.assertEquals((2, 3), out_val.shape)
             self.assertAllClose(x_val, out_val)
