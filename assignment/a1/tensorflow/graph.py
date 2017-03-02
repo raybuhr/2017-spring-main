@@ -1,7 +1,8 @@
+# %%
 import numpy as np
 import tensorflow as tf
 
-
+# %%
 class AddTwo(object):
     def __init__(self):
         '''Construct a graph to add two numbers.
@@ -32,11 +33,11 @@ class AddTwo(object):
             self.sess = tf.Session()
             # Create a placeholder op for the first number to add.
             # Store a reference to it in self.x
-            self.x = tf.placeholder(tf.float32)
+            self.x = tf.placeholder(tf.float32, shape=[None], name='x')
 
             # Create a placeholder for the second number to add.
             # Store a reference to it in self.y
-            self.y = tf.placeholder(tf.float32)
+            self.y = tf.placeholder(tf.float32, shape=[None], name='y')
 
             # Create an op to add the two placeholders. Store it in self.z
             self.z = tf.add(self.x, self.y)
@@ -226,12 +227,11 @@ def train_nn(X, y, X_test, hidden_dims, batch_size,
     loss = tf.reduce_mean(
         tf.nn.sigmoid_cross_entropy_with_logits(logits, y_ph))
 
-    y_hat = tf.nn.sigmoid(logits)
+    y_hat = tf.sigmoid(logits)
 
     train_op = (
         tf.train.GradientDescentOptimizer(learning_rate)
-        .minimize(loss, global_step)
-        )
+        .minimize(loss, global_step=global_step))
 
     # END YOUR CODE
 
@@ -259,9 +259,9 @@ def train_nn(X, y, X_test, hidden_dims, batch_size,
             # Hint: Evaluate all three in a single call to session.run.
             # Hint: To be clear, do not call session.run more than once!
             # START YOUR CODE
-            global_step_value, op_value, loss_value = sess.run(
-                [global_step, train_op, loss],
-                feed_dict={x: X_batch, y: y_batch})
+            global_step_value, loss_value, op_value = sess.run(
+                [global_step, loss, train_op],
+                feed_dict={x_ph: X_batch, y_ph: y_batch})
 
             # END YOUR CODE
         if epoch_num % 300 == 0:
@@ -286,5 +286,5 @@ def train_nn(X, y, X_test, hidden_dims, batch_size,
     # Hint: Make sure you evaluate X_test, not X_train!
 
     # START YOUR CODE
-    pass
+    return 1 * (sess.run(y_hat, feed_dict={x_ph: X_test}) > 0.5)
     # END YOUR CODE
