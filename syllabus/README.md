@@ -59,7 +59,7 @@ We recognize that sometimes things happen in life outside the course, especially
 
 Once you run out of late days, each 24 hour period (or any part thereof) results in a **10 percentage point deduction** on that deliverable's grade.
 
-You can use a maximum of 2 late days on any single deliverable, and we will not be accepting any submissions more than 48 hours past the original due-date. (We want to be more flexible here, but your fellow students also want their graded assignments back promptly!)
+You can use a **maximum of 2 late days** on any single deliverable.  We will **not be accepting any submissions more than 48 hours past the original due-date**. (We want to be more flexible here, but your fellow students also want their graded assignments back promptly!)
 
 We don't anticipate granting extensions beyond these policies.  Plan your time accordingly!
 
@@ -258,7 +258,10 @@ We'll update the table below with assignments as they become available, as well 
   <li>Read: <a href="http://infolab.stanford.edu/~backrub/google.html" target="_blank">The Anatomy of a Large-Scale Hypertextual Web Search Engine</a>
   <li>Skim: <a href="http://nlp.stanford.edu/IR-book/pdf/irbookprint.pdf" target="_blank">"An Introduction to Information Retrieval", sections 6.2 and 6.3</a>
   <li><em>Optional:</em> <a href="http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf" target="_blank">PageRank</a> (Page, et al. 1999)
-  </ul></td>
+  </ul>
+  <p>
+  <a href="https://docs.google.com/presentation/d/126WF73lCT21AVzrWmVsGBEsi_zV9BQeKozCl6KsfYiE/preview" target="_blank">[Slides]</a>
+  </td>
 </tr>
 <tr><!--- Week 5-6 Assignment -->
   <td><strong><a href="../assignment/a3" target="_blank">Assignment&nbsp;3</a></strong>
@@ -279,10 +282,15 @@ We'll update the table below with assignments as they become available, as well 
   <li>Tag sets
   <li>Most frequent tag baseline
   <li>HMM/CRF models
-  </ul></td>
+  </ul>
+  <b>Note:</b> Section 7.6 this week in the async is optional.
+  </td>
   <td><ul>
   <li>Read: <a href="http://www.nltk.org/book_1ed/ch05.html" target="_blank">NLTK book chapter 5: Categorizing and Tagging Words</a>
-  </ul></td>
+  </ul>
+  <p>
+  <a href="https://docs.google.com/presentation/d/1lTqY-Pn6YUIkFmzn_k7ATzBA0k2a4gkdrMhibfV09_M/preview" target="_blank">[Slides]</a>
+  </td>
 </tr>
 <tr><!--- Week 8 -->
   <td><strong>Week&nbsp;8</strong><br>(Feb.&nbsp;27&nbsp;-&nbsp;Mar.&nbsp;5)</td>
@@ -291,11 +299,26 @@ We'll update the table below with assignments as they become available, as well 
   <li>Feature engineering
   <li>Leveraging unlabeled data
   <li>Low resource languages
-  </ul></td>
+  </ul>
+  <b>Note:</b> This week's async is optional (but good reference material if your project focuses on POS tagging).  We will spend live session time to reinforce Week 7 material.
+  </td>
   <td><ul>
   <li>Read: <a href="https://arxiv.org/pdf/1104.2086.pdf" target="_blank">A Universal Part-of-Speech Tagset</a>
   <li>Read: <a href="http://nlp.stanford.edu/pubs/CICLing2011-manning-tagging.pdf" target="_blank">Part-of-Speech Tagging from 97% to 100%: Is It Time for Some Linguistics?</a>
   </ul></td>
+</tr>
+<tr><!--- Week 7-8 Assignment -->
+  <td><strong><a href="../assignment/a4" target="_blank">Assignment&nbsp;4</a></strong>
+  <br>due&nbsp;Mar.&nbsp;5</td>
+  <td><strong>Dynamic Programming Intro</strong></td>
+  <td><ul>
+  <li>Dynamic programming
+  </ul></td>
+  <td>
+  <a href="../assignment/a4" target="_blank">Assignment 4</a>
+  <p>
+  <p>Note: this is a somewhat shorter assignment than usual.
+  </td>
 </tr>
 <tr><!--- Week 9 -->
   <td><strong>Week&nbsp;9</strong><br>(Mar.&nbsp;6&nbsp;-&nbsp;12)</td>
@@ -310,6 +333,19 @@ We'll update the table below with assignments as they become available, as well 
   <li>Read: <a href="https://web.stanford.edu/~jurafsky/slp3/14.pdf" target="_blank">Dependency Parsing (J&M Chapter 14)</a>
   <li>Optional: <a href="http://cs.stanford.edu/people/danqi/papers/emnlp2014.pdf" target="_blank">A Fast and Accurate Dependency Parser using Neural Networks</a> (Chen & Manning 2014)
   </ul></td>
+</tr>
+<tr><!--- Week 8-9 Assignment -->
+  <td><strong>Assignment&nbsp;5</strong>
+  <br>due&nbsp;Mar.&nbsp;12 (tentative)</td>
+  <td><strong>POS Tagging / HMMs</strong></td>
+  <td><ul>
+  <li>HMMs
+  <li>Forward-Backward
+  <li>Viterbi
+  </ul></td>
+  <td>
+  <em>To be released</em>
+  </td>
 </tr>
 <tr><!--- Week 10 -->
   <td><strong>Week&nbsp;10</strong><br>(Mar.&nbsp;13&nbsp;-&nbsp;19)</td>
@@ -339,6 +375,15 @@ We'll update the table below with assignments as they become available, as well 
   <li><em>Optional:</em> <a href="http://www.aclweb.org/anthology/P16-1061" target="_blank">Improving Coreference Resolution by Learning Entity-Level Distributed
   Representations</a> (Clark and Manning 2016, neural coreference)
   </ul></td>
+</tr>
+<tr><!--- Week 10-11 Assignment -->
+  <td><strong>Assignment&nbsp;6</strong>
+  <br>due&nbsp;Mar.&nbsp;26 (tentative)</td>
+  <td><em>TBA</em></td>
+  <td></td>
+  <td>
+  <em>To be released</em>
+  </td>
 </tr>
 <tr><!--- Spring Break -->
   <td><strong>Spring Break</strong><br>(Mar.&nbsp;27&nbsp;-&nbsp;Apr.&nbsp;2)</td>

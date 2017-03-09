@@ -9,9 +9,10 @@ TL;DR: Start early!
 Each assignment is due at 11:59pm Pacific the Sunday at the end of the week indicated.
 
 - [Assignment 0](a0/) (Course Set-Up) - due end of Week 1 (Jan. 15, 11:59 pm Pacific)
-- [Assignment 1](a1/) (Info Theory and TensorFlow)- due end of Week 2 (Jan. 22, 11:59 pm Pacific)
-- [Assignment 2](a2/) (n-grams and Word Embeddings)- due end of Week 4 (Feb. 5, 11:59 pm Pacific)
-- [Assignment 3](a3/) (RNN Language Model)- due end of Week 6 (Feb. 19, 11:59 pm Pacific)
+- [Assignment 1](a1/) (Info Theory and TensorFlow) - due end of Week 2 (Jan. 22, 11:59 pm Pacific)
+- [Assignment 2](a2/) (n-grams and Word Embeddings) - due end of Week 4 (Feb. 5, 11:59 pm Pacific)
+- [Assignment 3](a3/) (RNN Language Model) - due end of Week 6 (Feb. 19, 11:59 pm Pacific)
+- [Assignment 4](a4/) (Dynamic Programming) - due end of Week 8 (Mar. 5, 11:59 pm Pacific)
 
 ### Collaboration policy
 
